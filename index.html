@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لُوفينغ هومز – فندق كلاب في هونغ كونغ</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Accessibility Controls -->
+    <div class="accessibility-controls">
+        <div class="language-selector">
+            <select id="langSelect" class="lang-dropdown">
+                <option value="ar">العربية</option>
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="es">Español</option>
+                <option value="ko">한국어</option>
+
+            </select>
+        </div>
+        <button id="textIncrease" class="access-btn" title="تكبير النص">
+            <i class="fas fa-plus"></i>
+        </button>
+        <button id="textDecrease" class="access-btn" title="تصغير النص">
+            <i class="fas fa-minus"></i>
+        </button>
+        <button id="textToSpeech" class="access-btn" title="استماع للنص">
+            <i class="fas fa-volume-up"></i>
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-paw"></i>
+                    <span>لُوفينغ هومز</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link" data-text="الرئيسية">الرئيسية</a></li>
+                    <li><a href="#about" class="nav-link" data-text="عن الفندق">عن الفندق</a></li>
+                    <li><a href="#services" class="nav-link" data-text="الخدمات">الخدمات</a></li>
+                    <li><a href="#packages" class="nav-link" data-text="الحزم">الحزم</a></li>
+                    <li><a href="#facilities" class="nav-link" data-text="المرافق">المرافق</a></li>
+                    <li><a href="#team" class="nav-link" data-text="فريقنا">فريقنا</a></li>
+                    <li><a href="#news" class="nav-link" data-text="الأخبار">الأخبار</a></li>
+                    <li><a href="#contact" class="nav-link" data-text="اتصل بنا">اتصل بنا</a></li>
+                    <li><a href="#faq" class="nav-link" data-text="أسئلة شائعة">أسئلة شائعة</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="animate-fadeInUp" data-text="مرحبًا بكم في لُوفينغ هومز">مرحبًا بكم في لُوفينغ هومز</h1>
+                    <p class="animate-fadeInUp animate-delay-1" data-text="المكان الدافئ والمريح لكلابكم في قلب هونغ كونغ">
+                        المكان الدافئ والمريح لكلابكم في قلب هونغ كونغ
+                    </p>
+                    <p class="animate-fadeInUp animate-delay-2" data-text="نحن نقدم بيئة آمنة وممتعة مع مرافق حديثة وخدمات عالية الجودة">
+                        نحن نقدم بيئة آمنة وممتعة مع مرافق حديثة وخدمات عالية الجودة
+                    </p>
+                    <p class="animate-fadeInUp animate-delay-3" data-text="يمكنكم استكشاف موقعنا للتعرف على خدماتنا، حزمنا المتنوعة، والتواصل معنا بسهولة">
+                        يمكنكم استكشاف موقعنا للتعرف على خدماتنا، حزمنا المتنوعة، والتواصل معنا بسهولة
+                    </p>
+                    <div class="hero-buttons animate-fadeInUp animate-delay-4">
+                        <a href="#services" class="btn btn-primary" data-text="اكتشف باقاتنا">اكتشف باقاتنا</a>
+                        <a href="#contact" class="btn btn-secondary" data-text="اتصل بنا">اتصل بنا</a>
+                    </div>
+                </div>
+                <div class="hero-video animate-scaleIn">
+                    <video id="video-frame" width="560" height="315" autoplay muted loop controls>
+                        <source src="C:\Users\Magic System\Downloads\videoplayback (9).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-controls">
+                        <button id="toggleVideo" class="video-btn">
+                            <i class="fas fa-pause"></i>
+                            <span>إيقاف الفيديو</span>
+                        </button>
+                        <button id="toggleImage" class="video-btn">
+                            <i class="fas fa-image"></i>
+                            <span>إظهار الصورة</span>
+                        </button>
+                    </div>
+                    <div class="video-thumbnail" id="videoThumbnail">
+                        <img src="https://img.youtube.com/vi/Br9uhho-3-g/hqdefault.jpg" alt="لُوفينغ هومز - فندق كلاب فاخر">
+                        <div class="play-button" onclick="playVideo()">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 data-text="من نحن">من نحن</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p data-text="لُوفينغ هومز هو فندق متكامل للكلاب يوفر بيئة دافئة وآمنة">
+                            لُوفينغ هومز هو فندق متكامل للكلاب يوفر بيئة دافئة وآمنة
+                        </p>
+                        <p data-text="نعتني بكلابكم مع مراعاة رفاهيتها وسعادتها">
+                            نعتني بكلابكم مع مراعاة رفاهيتها وسعادتها
+                        </p>
+                        <p data-text="الفندق يضم مراعي آمنة، حظائر لعب داخلية وخارجية، ومسارات مشي وتمارين يومية">
+                            الفندق يضم مراعي آمنة، حظائر لعب داخلية وخارجية، ومسارات مشي وتمارين يومية
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://i.pinimg.com/1200x/32/ea/70/32ea7051bcb103476a7861e7f3f345d4.jpg" alt="مرافق الفندق">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <div class="container">
+                <h2 data-text="خدماتنا">خدماتنا</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="https://splashanddashfranchise.com/wp-content/uploads/2025/03/A_Cute_Little_Dog_Taking_A_Bubble_Bath_W_original_2432465-1030x589.jpg" alt="Dog taking a bubble bath while being groomed by a professional">
+                        <h3 data-text="Grooming & Spa">Grooming & Spa</h3>
+                        <p data-text="تنظيف واستحمام احترافي">تنظيف واستحمام احترافي</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://i.pinimg.com/originals/a9/63/f1/a963f111c025e6b8c87479f64ff45249.jpg" alt="Comfortable indoor dog room with a cozy sleeping bed">
+                        <h3 data-text="Luxury Rooms">Luxury Rooms</h3>
+                        <p data-text="الغرف الداخلية المريحة">الغرف الداخلية المريحة</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://png.pngtree.com/thumb_back/fw800/background/20230425/pngtree-husky-dog-is-smiling-image_2554442.jpg" alt="Dog ready for transportation service">
+                        <h3 data-text="Pick-up & Drop-off">Pick-up & Drop-off</h3>
+                        <p data-text="خدمة التوصيل">خدمة التوصيل</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://assets.wfcdn.com/im/84603304/compr-r85/2596/259664611/34.4''+H+Metal+Exercise+Pen.jpg" alt="Secure outdoor fenced area for dogs">
+                        <h3 data-text="Outdoor Safe Fields">Outdoor Safe Fields</h3>
+                        <p data-text="ساحات خارجية آمنة">ساحات خارجية آمنة</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://dogtime.com/wp-content/uploads/sites/12/2017/06/jog-run-dog-safe-2.jpg?resize=201" alt="Person walking and jogging with a dog outdoors">
+                        <h3 data-text="Dog Walking">Dog Walking</h3>
+                        <p data-text="مشي الكلاب اليومي">مشي الكلاب اليومي</p>
+                    </div>
+                    <div class="service-card">
+                        <h3 data-text="Veterinary Services">Veterinary Services</h3>
+                        <p data-text="خدمات بيطرية على مدار الساعة">خدمات بيطرية على مدار الساعة</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://tse3.mm.bing.net/th/id/OIP.AL91wH-yNtZmnQ7YW4Aj9QHaEJ?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Security camera monitoring dogs in a facility">
+                        <h3 data-text="Pet Monitoring">Pet Monitoring</h3>
+                        <p data-text="مراقبة الكلاب 24/7">مراقبة الكلاب 24/7</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://supernutritious.net/wp-content/uploads/2022/07/what-are-the-symptoms-of-hookworms-in-dogs-cae13bd.jpg" alt="Dogs playing in a grassy garden area">
+                        <h3 data-text="Private Grass Area">Private Grass Area</h3>
+                        <p data-text="مساحة عشب خاصة">مساحة عشب خاصة</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://img.ltwebstatic.com/images3_spmp/2024/11/20/d0/1732086643d121e6903579fa8c3992f2ac0831d7e6_thumbnail_900x.png" alt="Indoor play area for dogs">
+                        <h3 data-text="Indoor Play Area">Indoor Play Area</h3>
+                        <p data-text="منطقة لعب داخلية">منطقة لعب داخلية</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Packages Section -->
+        <section id="packages" class="section">
+            <div class="container">
+                <h2 data-text="حزم الإقامة">حزم الإقامة</h2>
+                <div class="packages-grid">
+                    <div class="package-card premium">
+                        <h3 data-text="المميزة">المميزة</h3>
+                        <div class="package-features">
+                            <ul>
+                                <li data-text="المشي 4 مرات يوميًا">المشي 4 مرات يوميًا</li>
+                                <li data-text="ممارسة 4 أنشطة">ممارسة 4 أنشطة</li>
+                                <li data-text="مساحة عشب خاصة">مساحة عشب خاصة</li>
+                                <li data-text="تحديثات وصور يومية">تحديثات وصور يومية</li>
+                                <li data-text="مكافآت مخصصة">مكافآت مخصصة</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="package-card classic">
+                        <h3 data-text="الكلاسيكية">الكلاسيكية</h3>
+                        <div class="package-features">
+                            <ul>
+                                <li data-text="المشي 3 مرات">المشي 3 مرات</li>
+                                <li data-text="ممارسة 3 أنشطة">ممارسة 3 أنشطة</li>
+                                <li data-text="حظيرة لعب داخلية">حظيرة لعب داخلية</li>
+                                <li data-text="منطقة استرخاء">منطقة استرخاء</li>
+                                <li data-text="جلسة حالقة وتنظيف">جلسة حالقة وتنظيف</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="package-card daily">
+                        <h3 data-text="اليومية">اليومية</h3>
+                        <div class="package-features">
+                            <ul>
+                                <li data-text="المشي مرتين">المشي مرتين</li>
+                                <li data-text="منطقة لعب خارجية">منطقة لعب خارجية</li>
+                                <li data-text="مسار رشاقة">مسار رشاقة</li>
+                                <li data-text="حفر حفرة في الرمل">حفر حفرة في الرمل</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p class="package-note" data-text="يمكن تخصيص الحزم لإقامات طويلة أو متطلبات خاصة بعد التواصل مع الفندق">
+                    يمكن تخصيص الحزم لإقامات طويلة أو متطلبات خاصة بعد التواصل مع الفندق
+                </p>
+            </div>
+        </section>
+
+        <!-- Facilities Section -->
+        <section id="facilities" class="section">
+            <div class="container">
+                <h2 data-text="مرافق الفندق">مرافق الفندق</h2>
+                <div class="facilities-grid">
+                    <div class="facility-item">
+                        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="صالة للحلاقة ومنتجع" class="facility-image">
+                        <i class="fas fa-cut"></i>
+                        <h3 data-text="صالة للحلاقة ومنتجع">صالة للحلاقة ومنتجع</h3>
+                    </div>
+                    <div class="facility-item">
+                        <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="مراعي خارجية آمنة" class="facility-image">
+                        <i class="fas fa-tree"></i>
+                        <h3 data-text="مراعي خارجية آمنة ومسارات المشي">مراعي خارجية آمنة ومسارات المشي</h3>
+                    </div>
+                    <div class="facility-item">
+                        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="حظيرة لعب داخلية" class="facility-image">
+                        <i class="fas fa-home"></i>
+                        <h3 data-text="حظيرة لعب داخلية ومساحات خضراء خاصة">حظيرة لعب داخلية ومساحات خضراء خاصة</h3>
+                    </div>
+                    <div class="facility-item">
+                        <i class="fas fa-stethoscope"></i>
+                        <h3 data-text="خدمات بيطرية على مدار الساعة">خدمات بيطرية على مدار الساعة</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Team Section -->
+        <section id="team" class="section">
+            <div class="container">
+                <h2 data-text="فريقنا">فريقنا</h2>
+                <p class="team-description" data-text="يتكون فريقنا من محترفين متخصصين في رعاية الحيوانات، كلهم شغوفون بما يفعلون وملتزمون بتقديم أفضل رعاية ممكنة لكلابنا.">يتكون فريقنا من محترفين متخصصين في رعاية الحيوانات، كلهم شغوفون بما يفعلون وملتزمون بتقديم أفضل رعاية ممكنة لكلابنا.</p>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <img src="https://www.shutterstock.com/image-photo/portrait-young-attractive-doctor-standing-600nw-2291855257.jpg" alt="ماريا تشين" class="member-photo">
+                        <h3 class="member-name" data-text="ماريا تشين">ماريا تشين</h3>
+                        <p class="member-title" data-text="أخصائية التجميل">أخصائية التجميل</p>
+                        <p class="member-description" data-text="خبيرة في العناية والتجميل">خبيرة في العناية والتجميل</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://tse3.mm.bing.net/th/id/OIP.XB8R1NskHKRCSXyI1ymgrAHaE7?w=2048&h=1365&rs=1&pid=ImgDetMain&o=7&rm=3" alt="جيمس لي" class="member-photo">
+                        <h3 class="member-name" data-text="جيمس لي">جيمس لي</h3>
+                        <p class="member-title" data-text="مدرب الكلاب الرئيسي">مدرب الكلاب الرئيسي</p>
+                        <p class="member-description" data-text="متخصص في سلوك وتدريب الكلاب">متخصص في سلوك وتدريب الكلاب</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://i.pinimg.com/1200x/6d/e7/92/6de792a3c93bf5f048d1676dedff534f.jpg" alt="لي وونغ" class="member-photo">
+                        <h3 class="member-name" data-text="لي وونغ">لي وونغ</h3>
+                        <p class="member-title" data-text="مديرة العمليات">مديرة العمليات</p>
+                        <p class="member-description" data-text="خبيرة في إدارة مرافق رعاية الحيوانات">خبيرة في إدارة مرافق رعاية الحيوانات</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://tse3.mm.bing.net/th/id/OIP.rOep3lhOkKZp2SKMHK_CpQHaIM?w=477&h=528&rs=1&pid=ImgDetMain&o=7&rm=3" alt="الدكتور تشان" class="member-photo">
+                        <h3 class="member-name" data-text="الدكتور تشان">الدكتور تشان</h3>
+                        <p class="member-title" data-text="الطبيب البيطري الرئيسي">الطبيب البيطري الرئيسي</p>
+                        <p class="member-description" data-text="خبرة 15 عامًا في رعاية الحيوانات">خبرة 15 عامًا في رعاية الحيوانات</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="section">
+            <div class="container">
+                <h2 data-text="آخر الأخبار">آخر الأخبار</h2>
+                <div class="news-grid">
+                    <div class="news-card">
+                        <img src="https://tse1.explicit.bing.net/th/id/OIP.a861Vm9uUGsf4rUuPmKMHwHaEo?rs=1&pid=ImgDetMain&o=7&rm=3" alt="صور يومية للكلاب">
+                        <h3 data-text="صور يومية لكلابكم">صور يومية لكلابكم</h3>
+                        <p data-text="يمكن للعملاء متابعة الصور اليومية لكلابهم">يمكن للعملاء متابعة الصور اليومية لكلابهم</p>
+                    </div>
+                    <div class="news-card">
+                        <img src="https://www.telegraph.co.uk/content/dam/travel/2024/05/24/TELEMMGLPICT000379017549_17165442012110_trans_NvBQzQNjv4BqpVlberWd9EgFPZtcLiMQf0Rf_Wk3V23H2268P_XkPxc.jpeg?imwidth=350" alt="كلب صغير يلعب بالكرة">
+                        <h3 data-text="عروض وفعاليات جديدة">عروض وفعاليات جديدة</h3>
+                        <p data-text="اطلع على تحديثات الفندق وعرض أي عروض أو فعاليات جديدة">اطلع على تحديثات الفندق وعرض أي عروض أو فعاليات جديدة</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 data-text="تواصل معنا">تواصل معنا</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3 data-text="البريد الإلكتروني">البريد الإلكتروني</h3>
+                                <p>info@lovinghomes.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3 data-text="الهاتف">الهاتف</h3>
+                                <p>+852 1234 5678</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <input type="text" placeholder="الاسم الكامل" required>
+                        <input type="email" placeholder="البريد الإلكتروني" required>
+                        <input type="tel" placeholder="رقم الهاتف">
+                        <select placeholder="نوع الحزمة">
+                            <option value="">اختر الحزمة</option>
+                            <option value="premium">المميزة</option>
+                            <option value="classic">الكلاسيكية</option>
+                            <option value="daily">اليومية</option>
+                            <option value="custom">مخصصة</option>
+                        </select>
+                        <input type="date" placeholder="تاريخ بدء الإقامة">
+                        <input type="date" placeholder="تاريخ انتهاء الإقامة">
+                        <input type="number" placeholder="عدد الكلاب" min="1" max="10">
+                        <select placeholder="حجم الكلاب">
+                            <option value="">اختر حجم الكلاب</option>
+                            <option value="small">صغيرة (أقل من 10كجم)</option>
+                            <option value="medium">متوسطة (10-25كجم)</option>
+                            <option value="large">كبيرة (أكثر من 25كجم)</option>
+                        </select>
+                        <textarea placeholder="رسالتك أو ملاحظات إضافية" rows="5" required></textarea>
+                        <button type="submit" class="btn btn-primary">إرسال طلب الحجز</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+            <div class="container">
+                <h2 data-text="أسئلة شائعة">أسئلة شائعة</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3 data-text="ما هي ساعات العمل؟">ما هي ساعات العمل؟</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-text="نحن نعمل على مدار 24 ساعة طوال أيام الأسبوع لتقديم أفضل رعاية لكلابكم.">نحن نعمل على مدار 24 ساعة طوال أيام الأسبوع لتقديم أفضل رعاية لكلابكم.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3 data-text="هل يمكنني زيارة كلبي خلال إقامته؟">هل يمكنني زيارة كلبي خلال إقامته؟</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-text="نعم، نرحب بالزيارات في أي وقت خلال ساعات العمل. يرجى حجز موعد مسبقاً.">نعم، نرحب بالزيارات في أي وقت خلال ساعات العمل. يرجى حجز موعد مسبقاً.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3 data-text="ما هي متطلبات التسجيل؟">ما هي متطلبات التسجيل؟</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-text="يتطلب التسجيل شهادة تطعيم سارية وتقرير صحي حديث من الطبيب البيطري.">يتطلب التسجيل شهادة تطعيم سارية وتقرير صحي حديث من الطبيب البيطري.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3 data-text="هل تقدمون خدمة التوصيل والاستلام؟">هل تقدمون خدمة التوصيل والاستلام؟</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-text="نعم، نقدم خدمة التوصيل والاستلام من وإلى أي مكان في هونغ كونغ مقابل رسوم إضافية.">نعم، نقدم خدمة التوصيل والاستلام من وإلى أي مكان في هونغ كونغ مقابل رسوم إضافية.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3 data-text="كيف تضمنون سلامة الكلاب؟">كيف تضمنون سلامة الكلاب؟</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-text="لدينا فريق مراقبة على مدار الساعة، كاميرات أمنية، وخدمات بيطرية متاحة دائماً.">لدينا فريق مراقبة على مدار الساعة، كاميرات أمنية، وخدمات بيطرية متاحة دائماً.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3 data-text="هل يمكنني إحضار طعام خاص لكلبي؟">هل يمكنني إحضار طعام خاص لكلبي؟</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-text="بالتأكيد! يمكنك إحضار طعام كلبي المفضل وسنقوم بتقديمه له حسب التعليمات.">بالتأكيد! يمكنك إحضار طعام كلبي المفضل وسنقوم بتقديمه له حسب التعليمات.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-paw"></i>
+                    <span>لُوفينغ هومز</span>
+                </div>
+                <p data-text="فندق كلاب متكامل في هونغ كونغ">فندق كلاب متكامل في هونغ كونغ</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 لُوفينغ هومز. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
